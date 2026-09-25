@@ -49,11 +49,14 @@ cadastrar.addEventListener("click", async (event) => {
     return;
   }
 
-  const resposta = await fetch("http://localhost:3000/adicionar", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(clientes),
-  });
+  const resposta = await fetch(
+    "https://cadastro-chamados.onrender.com/adicionar",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(clientes),
+    },
+  );
 
   const dados = await resposta.json();
   linha.dataset.id = dados.id;
@@ -103,7 +106,7 @@ cadastrar.addEventListener("click", async (event) => {
 
   //salva a nova prioridade e status
   async function atualizarChamado() {
-    await fetch(`http://localhost:3000/editar/${dados.id}`, {
+    await fetch(`https://cadastro-chamados.onrender.com/editar/${dados.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -170,9 +173,12 @@ tabela.addEventListener("click", async (botao) => {
     let statusTabela = linha.querySelector("#status__form");
     let novoStatus = statusTabela.value;
 
-    const resposta = await fetch(`http://localhost:3000/delete/${id}`, {
-      method: "DELETE",
-    });
+    const resposta = await fetch(
+      `https://cadastro-chamados.onrender.com/delete/${id}`,
+      {
+        method: "DELETE",
+      },
+    );
 
     linha.remove();
 
