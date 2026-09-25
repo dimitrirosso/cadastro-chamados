@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
+}
+
+body {
+  height: 100vh;
+  display: flex;
+}
+
+.menu__lateral {
+  background-color: rgb(41, 59, 126);
+  width: 23%;
+  height: 100%;
+  display: flex;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  gap: 25px;
+  margin-top: 80px;
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+  font-size: 20px;
+  width: 100%;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.principal {
+  width: 100%;
+  background-color: rgb(220, 217, 214);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.chamados__titulo {
+  margin-left: 20%;
+  font-size: 35px;
+  margin-top: 20px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 75%;
+  padding: 5px;
+}
+
+a:hover {
+  background-color: rgb(68, 76, 156);
+  border-radius: 10px;
+  padding: 5px;
+  width: 75%;
+}
+
+.categorias {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 90px;
+  margin-top: 40px;
+}
+
+.titulo {
+  margin-top: 7%;
+  margin-left: 40px;
+  font-size: 39px;
+  color: rgb(41, 59, 126);
+}
+
+.chamado,
+.andamento,
+.fechados {
+  background-color: white;
+  width: 190px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.chamado p,
+.andamento p,
+.fechados p {
+  font-size: 40px;
+  color: rgb(38, 48, 137);
+  font-weight: 600;
+}
+
+.tabela__principal {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 85%;
+  margin-right: 60px;
+  margin-top: 30px;
+  table-layout: fixed;
+}
+
+table th {
+  width: 30px;
+  padding: 5px;
+  background-color: white;
+  font-size: 20px;
+}
+
+table td {
+  text-align: center;
+  background-color: white;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.assunto {
+  width: 120px;
+}
+
+.fa-plus {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.novo__chamado {
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 45px;
+  background-color: rgb(47, 180, 40);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.fa-book-bookmark,
+.fa-address-book,
+.fa-arrow-up-right-from-square,
+.fa-chart-simple,
+.fa-gear {
+  margin-right: 12px;
+  color: white;
+}
+
+.formulario {
+  background-color: rgb(41, 59, 126);
+  height: 250px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho__form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modal {
+  width: 200px;
+  position: absolute;
+  display: none;
+}
+
+.cabecalho__form h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.container__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cancelar {
+  width: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.cadastrar {
+  width: 100%;
+  margin-top: 10px;
+  align-items: center;
+  padding: 4px;
+}

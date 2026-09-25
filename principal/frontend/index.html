@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/b27e652bdc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="menu__lateral">
+      <div class="cabecalho">
+        <h1 class="chamados__titulo">Chamados</h1>
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-book-bookmark"></i>Dashboard</a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-address-book"></i>Meus Chamados</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i>Novo
+              chamado</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-chart-simple"></i>Relatorio</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-gear"></i>Configurações</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="principal">
+      <h1 class="titulo">Dashboard</h1>
+      <div class="categorias">
+        <div class="chamado">
+          <h3>Chamados Abertos</h3>
+          <p class="num__chamados">0</p>
+        </div>
+
+        <div class="andamento">
+          <h3>Em andamento</h3>
+          <p class="num__andamento">0</p>
+        </div>
+
+        <div class="fechados">
+          <h3>Fechados</h3>
+          <p class="num__fechados">0</p>
+        </div>
+
+        <div class="tabela__chamados">
+          <button class="novo__chamado">
+            <i class="fa-solid fa-plus"></i>NOVO CHAMADO
+          </button>
+
+          <div class="modal">
+            <div class="formulario">
+              <div class="cabecalho__form">
+                <h2>NOVO CHAMADO</h2>
+                <button class="cancelar">X</button>
+              </div>
+              <form>
+                <div class="container__form">
+                  <div class="assunto__form">
+                    <input
+                      type="text"
+                      id="assunto__form"
+                      placeholder="Assunto"
+                    />
+                  </div>
+                  <div class="requisitante__form">
+                    <input
+                      type="text"
+                      id="requisitante__form"
+                      placeholder="Requisitante"
+                    />
+                  </div>
+                  <div class="prioridade__form">
+                    <select id="prioridade__form">
+                      <option value="Baixa">Baixa</option>
+                      <option value="Moderada">Moderada</option>
+                      <option value="Alta">Alta</option>
+                    </select>
+                  </div>
+                  <div class="status__form">
+                    <select id="status__form">
+                      <option value="Aberto">Aberto</option>
+                      <option value="Em andamento">Em andamento</option>
+                      <option value="Fechado">Fechado</option>
+                    </select>
+                  </div>
+                  <div class="data__form">
+                    <input id="data__form" type="date" />
+                  </div>
+
+                  <button class="cadastrar">Cadastrar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabela__principal">
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Assunto</th>
+            <th>Requisitante</th>
+            <th>Prioridade</th>
+            <th>Status</th>
+            <th>Data Abertura</th>
+            <th>Ações</th>
+          </tr>
+
+          <tbody id="lista__tabela">
+            <tr></tr>
+            <div class="acoes">
+              <!-- <button class="botao__editar">Editar</button>
+                <button class="botao__deletar">Lixo</button> -->
+            </div>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
