@@ -102,6 +102,8 @@ O TiDB Cloud utiliza compatibilidade com o protocolo MySQL, permitindo a utiliza
 - Vercel
 - Render
 - TiDB Cloud
+- 
+---
 
 ## 👨‍💻 Autor
 
